@@ -23,7 +23,7 @@ public class DbConnection
         try 
         {
 //             Class.forName("com.mysql.cj.jdbc.Driver");
-//             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jobportal", "root", "12345");
+//             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jobportal", "user name", "password");
             InputStream is= DbConnection.class.getResourceAsStream("db.properties");
             
             Properties p = new Properties();
@@ -31,8 +31,8 @@ public class DbConnection
             
 //            MysqlDataSource ds= new MysqlDataSource();
 //            ds.setURL("jdbc:mysql://localhost:3306/jobportal");
-//            ds.setUser("root");
-//            ds.setPassword("12345");
+//            ds.setUser("user name");
+//            ds.setPassword("password");
 
              jdbc_url=p.getProperty("jdbc_url");
              username=p.getProperty("username");
